@@ -1,0 +1,43 @@
+Source: golang-actorname
+Section: admin
+Priority: optional
+Maintainer: Mark Christopher West <markchristopherwest@gmail.com>
+Build-Depends: debhelper (>= 9), dh-exec, dh-golang, golang-go
+Standards-Version: 3.9.5
+Homepage: http://launchpad.net/actorname
+Vcs-Browser: http://bazaar.launchpad.net/~actorname/actorname/trunk/files
+Vcs-Bzr: https://code.launchpad.net/actorname/actorname/trunk
+
+Package: golang-actorname
+Architecture: any
+Depends: ${misc:Depends}
+Built-Using: ${misc:Built-Using}
+Description: generate pronouncable, perhaps even memorable, actor names
+ This utility will generate "actor names", consisting of a random
+ combination of an adverb, adjective, and proper name.  These are
+ useful for unique hostnames, for instance.
+ The default packaging contains about 2000 names, 1300 adjectives,
+ and 4000 adverbs, yielding nearly 10 billion unique combinations,
+ covering over 32 bits of unique namespace.
+ As such, PetName tries to follow the tenets of Zooko's triangle:
+ names are human meaningful, decentralized, and secure.
+
+Package: golang-actorname-dev
+Architecture: all
+Depends: ${misc:Depends}
+Description: golang library for generating pronouncable, memorable, actor names
+ This package provides a library for generating "actor names", consisting
+ of a random combination of an adverb, adjective, and proper name.
+ These are useful for unique hostnames, for instance.
+ The default packaging contains about 2000 names, 1300 adjectives,
+ and 4000 adverbs, yielding nearly 10 billion unique combinations,
+ covering over 32 bits of unique namespace.
+ As such, PetName tries to follow the tenets of Zooko's triangle:
+ names are human meaningful, decentralized, and secure.
+
+Package: golang-github-markchristopherwest-golang-actorname-dev
+Architecture: all
+Depends: ${misc:Depends}, golang-actorname-dev
+Description: golang library for generating pronouncable, memorable, actor names
+ This is a metapackage for golang-actorname-dev, which adheres to the
+ naming convention.
